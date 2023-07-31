@@ -8,6 +8,10 @@
   "name": "Edit HTML Source",
   "description": "Allows to edit the source of the currently composed message",
   "version": "1.0",
+  "default_locale": "en-US",
+  "icons": {
+      "32": "images/icon-html.png"
+  },
   "permissions": [
     "compose"
   ],
