@@ -15,6 +15,7 @@ function install(composeWindow) {
       htmlEditorBox.collapsed = false;
       htmlEditor.contentWindow.focus();
     },
+
     FocusDefaultEditor: function () {
       console.log("FocusDefaultEditor");
       let messageEditor = composeWindow.document.getElementById("messageEditor");
@@ -22,6 +23,44 @@ function install(composeWindow) {
       messageEditor.collapsed = false;
       htmlEditorBox.collapsed = true;
       messageEditor.contentWindow.focus();
+    },
+
+    SelectEditMode: function (mode, syncOnly) {
+      //modes: 0 - WYSIWYG, 1- HTML source
+      try {
+        if (window.gMsgCompose == null) return;//function called when composer window is not constructed completly yet, just after overlay loads
+
+        //copy HTML from WYSIWYG to source, only when WYSIWYG is changed from last time. in other case leave source HTML untouched, user may do fixes manually
+        if (mode == 1) {
+          //note: strong compare is required!
+          if (Stationery_.WYSIWYG_State !== window.GetCurrentEditor().getModificationCount()) {
+            Stationery.sourceEditor.setHTML(window, "<html>\n" + window.GetCurrentEditor().rootElement.parentNode.innerHTML + "\n</html>", Stationery_.Source_State);
+            Stationery_.Source_State = false;
+            Stationery_.WYSIWYG_State = window.GetCurrentEditor().getModificationCount();
+          }
+
+          //switch panes
+          if (!syncOnly) {
+            window.document.getElementById('stationery-content-source-box').removeAttribute('collapsed');
+            window.document.getElementById('content-frame').setAttribute('collapsed', true);
+          }
+        }
+
+        // user switches back to WYSIWYG, only when source is changed from last time. In other cases leave WYSIWYG untouched
+        if (mode == 0) {
+          if (Stationery.sourceEditor.isModified(window)) {
+            window.gMsgCompose.editor.QueryInterface(Components.interfaces.nsIHTMLEditor).rebuildDocumentFromSource(Stationery.sourceEditor.getHTML(window));
+            Stationery.sourceEditor.setNotModified(window);
+            Stationery_.WYSIWYG_State = window.GetCurrentEditor().getModificationCount();
+          }
+          //switch panes
+          if (!syncOnly) {
+            window.document.getElementById('stationery-content-source-box').setAttribute('collapsed', true);
+            window.document.getElementById('content-frame').removeAttribute('collapsed');
+          }
+        }
+
+      } catch (e) { Stationery.handleException(e); }
     }
   }
 
@@ -63,16 +102,16 @@ var EditHTML = class extends ExtensionCommon.ExtensionAPI {
     return {
       EditHTML: {
         async patchComposer(windowId) {
-            let windowObject = context.extension.windowManager.get(windowId);
-            if (!windowObject) {
-              return;
-            }
-            let {window} = windowObject;
-            let windowType = window.document.documentElement.getAttribute("windowtype");
-            if (windowType != "msgcompose") {
-              return;
-            }
-            install(window);
+          let windowObject = context.extension.windowManager.get(windowId);
+          if (!windowObject) {
+            return;
+          }
+          let { window } = windowObject;
+          let windowType = window.document.documentElement.getAttribute("windowtype");
+          if (windowType != "msgcompose") {
+            return;
+          }
+          install(window);
         },
       },
     };
