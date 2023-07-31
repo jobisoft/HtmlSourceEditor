@@ -21,6 +21,14 @@
     ]
   },
   "experiment_apis": {
+    "ResourceUrl": {
+      "schema": "api/ResourceUrl/schema.json",
+      "parent": {
+        "scopes": ["addon_parent"],
+        "paths": [["ResourceUrl"]],
+        "script": "api/ResourceUrl/implementation.js"
+      }
+    },
     "EditHTML": {
       "schema": "api/EditHTML/schema.json",
       "parent": {
