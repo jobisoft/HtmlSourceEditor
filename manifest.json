@@ -1,0 +1,35 @@
+{
+  "manifest_version": 2,
+  "applications": {
+    "gecko": {
+      "id": "edithtmlsource@jobisoft.de"
+    }
+  },
+  "name": "Edit HTML Source",
+  "description": "Allows to edit the source of the currently composed message",
+  "version": "1.0",
+  "permissions": [
+    "compose"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "experiment_apis": {
+    "EditHTML": {
+      "schema": "api/EditHTML/schema.json",
+      "parent": {
+        "scopes": [
+          "addon_parent"
+        ],
+        "paths": [
+          [
+            "EditHTML"
+          ]
+        ],
+        "script": "api/EditHTML/implementation.js"
+      }
+    }
+  }  
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "namespace": "EditHTML",
+    "functions": [
+      {
+        "name": "patchComposer",
+        "type": "function",
+        "async": true,
+        "parameters": [
+          {
+            "name": "windowId",
+            "type": "integer"
+          }
+        ]
+      }
+    ]
+  }
+]
