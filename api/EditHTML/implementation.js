@@ -9,18 +9,19 @@ function install(composeWindow) {
     FocusSourceCodeEditor: function () {
       console.log("FocusSourceCodeEditor")
       let messageEditor = composeWindow.document.getElementById("messageEditor");
-      let htmleditor = composeWindow.document.getElementById("edithtmladdon-content-source-ace");
+      let htmlEditorBox = composeWindow.document.getElementById("edithtmladdon-content-source-box");
+      let htmlEditor = composeWindow.document.getElementById("edithtmladdon-content-source-ace");
       messageEditor.collapsed = true;
-      htmleditor.collapsed = false;
-
+      htmlEditorBox.collapsed = false;
+      htmlEditor.contentWindow.focus();
     },
     FocusDefaultEditor: function () {
       console.log("FocusDefaultEditor");
       let messageEditor = composeWindow.document.getElementById("messageEditor");
-      let htmleditor = composeWindow.document.getElementById("edithtmladdon-content-source-ace");
+      let htmlEditorBox = composeWindow.document.getElementById("edithtmladdon-content-source-box");
       messageEditor.collapsed = false;
-      htmleditor.collapsed = true;
-      composeWindow.document.getElementById('messageEditor').contentWindow.focus()
+      htmlEditorBox.collapsed = true;
+      messageEditor.contentWindow.focus();
     }
   }
 
@@ -34,29 +35,26 @@ function install(composeWindow) {
         <tab id="edithtmladdon-content-tab2" label="${extension.localeData.localizeMessage("stationery.Composer.Tab.Source")}" />
       </tabs> 
     </tabbox>
-    <vbox id="edithtmladdon-content-source-box" flex="1" collapsed="true">
-      <iframe id="edithtmladdon-content-source-ace" data-preview="true" flex="1" src="chrome://stationery/content/html-source-editor.html" />
-    </vbox>
-  </hbox>`;
-  let tabBoxElement = Array.from(composeWindow.MozXULElement.parseXULToFragment(tabBox).children).shift();
+  </hbox>
+  <vbox id="edithtmladdon-content-source-box" collapsed="true" flex="1">
+    <iframe id="edithtmladdon-content-source-ace" data-preview="true" flex="1" src="resource://edithtmladdon/content/html-source-editor.html" />
+  </vbox>`;
+  let injectedElements = composeWindow.MozXULElement.parseXULToFragment(tabBox);
   let messageArea = composeWindow.document.getElementById("messageArea");
   let messageEditor = composeWindow.document.getElementById("messageEditor");
-  messageArea.insertBefore(tabBoxElement, messageEditor);
+  messageArea.insertBefore(injectedElements, messageEditor);
 
   let tab1 = composeWindow.document.getElementById("edithtmladdon-content-tab1");
   let tab2 = composeWindow.document.getElementById("edithtmladdon-content-tab2");
   tab1.addEventListener("click", composeWindow.EditHTMLAddon.FocusDefaultEditor)
   tab2.addEventListener("click", composeWindow.EditHTMLAddon.FocusSourceCodeEditor)
-
-  let htmleditor = composeWindow.document.getElementById("edithtmladdon-content-source-ace");
-
 }
 
 function uninstall(composeWindow) {
   console.log("UNINSTALL");
 
-  let tabbox = composeWindow.document.getElementById("edithtmladdon-tabbox-box");
-  tabbox.remove();
+  composeWindow.document.getElementById("edithtmladdon-tabbox-box").remove();
+  composeWindow.document.getElementById("edithtmladdon-content-source-box").remove();
   delete composeWindow.EditHTMLAddon;
 }
 
