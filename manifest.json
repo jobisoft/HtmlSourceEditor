@@ -20,28 +20,7 @@
       "background.js"
     ]
   },
-  "experiment_apis": {
-    "ResourceUrl": {
-      "schema": "api/ResourceUrl/schema.json",
-      "parent": {
-        "scopes": ["addon_parent"],
-        "paths": [["ResourceUrl"]],
-        "script": "api/ResourceUrl/implementation.js"
-      }
-    },
-    "EditHTML": {
-      "schema": "api/EditHTML/schema.json",
-      "parent": {
-        "scopes": [
-          "addon_parent"
-        ],
-        "paths": [
-          [
-            "EditHTML"
-          ]
-        ],
-        "script": "api/EditHTML/implementation.js"
-      }
-    }
-  }  
+  "compose_action": {
+    "default_title": "Edit HTML Source"
+  }
 }
