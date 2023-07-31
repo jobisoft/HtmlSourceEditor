@@ -1,6 +1,8 @@
-# Edit HTML Source
+# HTML Source Editor
 
-This project is based on the Stationary Add-on, created by **Łukasz Płomiński**. The used locale strings were originally provided by
+This project is based on the Stationary Add-on, which was created by **Łukasz Płomiński**. 
+
+The *HTML Source Editor* add-on allows to edit the source of the currently composed message. The used locale strings were originally provided by
 
     * Sven Giermann (de)
     * Jean-Bernard Marcon (fr)
