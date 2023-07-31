@@ -5,12 +5,12 @@
       "id": "edithtmlsource@jobisoft.de"
     }
   },
-  "name": "Edit HTML Source",
+  "name": "HTML Source Editor",
   "description": "Allows to edit the source of the currently composed message",
   "version": "1.0",
   "default_locale": "en-US",
   "icons": {
-      "32": "images/icon-html.png"
+    "32": "images/icon-html.png"
   },
   "permissions": [
     "compose"
@@ -21,6 +21,9 @@
     ]
   },
   "compose_action": {
-    "default_title": "Edit HTML Source"
+    "default_title": "HTML Editor",
+    "default_icon": {
+      "32": "images/icon-html.png"
+    }
   }
 }
