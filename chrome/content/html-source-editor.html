@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en"><head><title>HTML source</title>
+<style type="text/css" media="screen">
+    #editor {position: absolute; top: 0; right: 0; bottom: 0; left: 0; }
+    
+  .ace_line .ace_ex_fold {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
+    outline: 1px solid rgba(128,128,128,0.6);
+    border-radius: 4px;
+    background-color: rgba(128,128,128,0.2);
+    cursor: pointer;
+    pointer-events: auto;
+  }
+  
+  .ace_line .ace_ex_fold:hover{  
+    outline: 1px solid rgba(128,128,128,0.8);
+    background-color: rgba(128,128,128,0.4);
+  }
+  
+  
+        
+</style>
+</head><body>
+<div id="editor"></div>
+<script src="chrome://stationery/content/ace/ace.js"></script>
+<script src="chrome://stationery/content/ace/ext-language_tools.js"></script>
+
+<script>window.document.documentElement.setAttribute('windowtype', 'editor:source')</script>
+<script src="chrome://stationery/content/stationery.js"></script>
+
+</body>
+</html>

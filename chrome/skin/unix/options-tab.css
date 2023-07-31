@@ -1,0 +1,52 @@
+/******************************************************************************
+project: "Stationery" extension for Thunderbird
+filename: options-tab.css
+author: Łukasz 'Arivald' Płomiński <arivald@interia.pl>
+description:  CSS for options tab, Linux
+******************************************************************************/
+
+
+
+/* category selector */
+/*
+.category {
+  -moz-appearance: none;
+  border-width: 1px;
+  -moz-border-end-width: 0;
+  border-style: solid;
+  border-color: transparent;
+  padding: 10px 4px;
+  -moz-box-align: center;
+  overflow: hidden;
+  min-height: 0;
+  color: WindowText;
+}
+
+.category[selected] {
+  background-color: -moz-Field;
+  color: -moz-FieldText;
+  border-color: ThreeDShadow;
+}
+*/
+/* templates list */
+
+.stationery-identity-box {
+  border-bottom: 1px solid ThreeDLightShadow;
+}
+
+#stationery-templates-list {
+  border-top: 1px solid ThreeDLightShadow;
+}
+
+.stationery-template-item {
+  border-bottom: 1px solid ThreeDLightShadow;
+}
+
+.stationery-template-item[selected] {
+}
+
+/* options page */ 
+
+setting{
+  border-top: 1px solid ThreeDShadow;
+}

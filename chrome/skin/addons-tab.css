@@ -1,0 +1,11 @@
+/******************************************************************************
+project: "Stationery" extension for Thunderbird
+filename: addons-tab.css
+author: Łukasz 'Arivald' Płomiński <arivald@interia.pl>
+description:  CSS for messenger window, all platforms
+******************************************************************************/
+
+
+.extensions-stationery-TemplatesCount textbox {
+  max-width: 5em;
+}

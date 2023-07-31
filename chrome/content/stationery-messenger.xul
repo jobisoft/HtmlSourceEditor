@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+project: "Stationery" extension for Thunderbird
+filename: stationery-messenger.xul
+author: Łukasz 'Arivald' Płomiński <arivald@interia.pl>
+description: <overlay> for chrome://messenger/content/mailWindowOverlay.xul.
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* -->
+
+<!DOCTYPE window SYSTEM "chrome://stationery/locale/stationery.dtd">
+
+<?xml-stylesheet href="chrome://stationery/skin/messenger.css"?>
+
+<overlay id="Stationery-messenger-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+  <!--Stationery init script -->
+  <script type="application/x-javascript" src="chrome://stationery/content/stationery.js"/>
+  
+  <!-- Stationery options menu item -->
+  <menupopup id="taskPopup">
+    <menuitem 
+      id="stationery-options" 
+      insertafter="menu_preferences" 
+      label="&stationery.Options;" 
+      accesskey="&stationery.OptionsAKey;" 
+      oncommand="Stationery.showOptions(event)"
+    />
+  </menupopup>
+</overlay>

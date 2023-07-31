@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+project: "Stationery" extension for Thunderbird
+filename: stationery-addons-tab.xul
+author: Łukasz 'Arivald' Płomiński <arivald@interia.pl>
+description: <overlay> for addons manager.
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* -->
+
+<?xml-stylesheet href="chrome://stationery/skin/addons-tab.css"?>
+
+<overlay id="Stationery-addons-tab-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <script type="application/x-javascript" src="chrome://stationery/content/stationery.js"/> 
+</overlay>

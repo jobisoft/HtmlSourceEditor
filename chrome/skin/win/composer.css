@@ -1,0 +1,14 @@
+/******************************************************************************
+project: "Stationery" extension for Thunderbird
+filename: composer.css
+author: Łukasz 'Arivald' Płomiński <arivald@interia.pl>
+description:  CSS for composer, platform WIN
+******************************************************************************/
+
+#stationery-content-tab {
+  padding: 2px 5px 0px 5px;
+}
+
+#stationery-content-tab tab {
+  padding: 3px 8px 3px 8px;
+}

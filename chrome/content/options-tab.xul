@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<?xml-stylesheet href="chrome://global/skin/global.css"?>
+<?xml-stylesheet href="chrome://global/skin/in-content/common.css"?>
+<?xml-stylesheet href="chrome://global/skin/in-content/preferences.css"?>
+
+<?xml-stylesheet href="chrome://stationery/skin/options-tab.css" type="text/css"?>
+<?xml-stylesheet href="chrome://stationery-platform/skin/options-tab.css" type="text/css"?>
+
+<!DOCTYPE prefwindow SYSTEM "chrome://stationery/locale/stationery.dtd">
+
+<page xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+      id="stationery-options-page" 
+      role="application" 
+      windowtype="stationery:optionsPage">
+
+  <script type="application/x-javascript" src="chrome://stationery/content/stationery.js"/> 
+  <script type="application/x-javascript" src="chrome://stationery/content/options-tab.js"/> 
+
+
+  <hbox flex="1">
+ 
+    <!-- category list -->
+    <richlistbox id="categories">                      
+      <richlistitem id="stationery-category-templates" page="templates-page" class="category" name="&stationery.Options.tabTemplates;"/>
+      <richlistitem id="stationery-category-options" page="options-page" class="category" name="&stationery.Options.tabOptions;"/>
+      <richlistitem id="stationery-category-source" page="source-page" class="category" name="&stationery.Options.tabSourceEditor;"/>
+    </richlistbox>
+ 
+    <vbox id="stationery-view-port-container" class="main-content" flex="1">
+
+      <!-- templates management -->
+      <vbox id="templates-page" flex="1" collapsed="true" style="overflow:auto;">
+        <vbox class="templates-header-box">
+          <hbox align="center" class="stationery-identity-box">
+            <label value="&stationery.Options.tabTemplates.Header.Identity.Label;"/>
+            <menulist id="stationery-identities-menulist" flex="1" oncommand="onIdSelectorSelect()">
+              <menupopup id="stationery-identities-menulist-menupopup"/>
+            </menulist>
+            <button class="stationery-identity-add"
+                    label="&stationery.Options.tabTemplates.Header.Identity.Add;"
+                    tooltiptext="&stationery.Options.tabTemplates.Header.Identity.Add.Hint;"
+                    oncommand="addNewIdentityList()"
+            />
+            <button class="stationery-identity-remove"
+                    id="stationery-identity-remove"
+                    label="&stationery.Options.tabTemplates.Header.Identity.Remove;"
+                    tooltiptext="&stationery.Options.tabTemplates.Header.Identity.Remove.Hint;"
+                    oncommand="removeCurrentIdentityList()"
+            />
+          </hbox>
+          <hbox align="center" class="manage-buttons-box">
+            <button class="stationery-button-add" icon="open"
+              id="stationery-button-add-template"
+              label="&stationery.Options.tabTemplates.Header.Template.Add;"
+              tooltiptext="&stationery.Options.tabTemplates.Header.Template.Add.Hint;"
+              type="menu"
+            >
+              <menupopup id="stationery-button-add-template-menupopup"/>
+            </button>
+            <button class="stationery-button-up"
+              id="stationery-button-up-template"
+              label="&stationery.Options.tabTemplates.Header.Template.MoveUp;"
+              tooltiptext="&stationery.Options.tabTemplates.Header.Template.MoveUp.Hint;"
+              oncommand="moveTemplateUp()"
+            />
+            <button class="stationery-button-down"
+              id="stationery-button-down-template"
+              label="&stationery.Options.tabTemplates.Header.Template.MoveDown;"
+              tooltiptext="&stationery.Options.tabTemplates.Header.Template.MoveDown.Hint;"
+              oncommand="moveTemplateDown()"
+            />
+            <button class="stationery-button-edit"
+              initial-disabled="true"
+              id="stationery-button-edit-template"
+              label="&stationery.Options.tabTemplates.Header.Template.Edit;"
+              tooltiptext="&stationery.Options.tabTemplates.Header.Template.Edit.Hint;"
+              oncommand="editTemplate()"
+            />
+            <button class="stationery-button-edit-finish"
+              id="stationery-button-edit-template-finish"
+              label="&stationery.Options.tabTemplates.Header.Template.Edit.Finish;"
+              tooltiptext="&stationery.Options.tabTemplates.Header.Template.Edit.Finish.Hint;"
+              oncommand="finishEditTemplate()"
+              disabled="true"
+            />
+            <button class="stationery-button-remove" icon="remove" 
+              id="stationery-button-remove-template"
+              label="&stationery.Options.tabTemplates.Header.Template.Remove;"
+              tooltiptext="&stationery.Options.tabTemplates.Header.Template.Remove.Hint;"
+              oncommand="removeTemplate()"
+            />
+            <label class="manage-buttons-label" value="&stationery.Options.tabTemplates.Header.Template.DragnDrop.Hint;"/>
+          </hbox>
+        </vbox>
+        
+        <richlistbox 
+            id="stationery-templates-list" 
+            flex="1" 
+            onselect="onTemplatesListSelectionChanged()"
+        />
+        
+      </vbox>
+     
+      <!-- options page -->
+      <vbox id="options-page" flex="1" style="overflow:auto;">
+      
+        <grid class="settings-grid">
+          <columns>
+            <column flex="1" />
+            <column flex="2" />
+          </columns>
+          <rows>
+         
+            <setting type="integer" min="5" max = "40"
+              pref="TemplatesCount" 
+              class="extensions-stationery-TemplatesCount" 
+              title="&stationery.Options.tabOptions.MaxTemplatesCount;" 
+              textboxstyle="max-width: 5em;"
+            />
+            
+            <setting type="bool" 
+              pref="AutomaticManagement" 
+              title="&stationery.Options.tabOptions.AutoManage;"
+              desc="&stationery.Options.tabOptions.AutoManage.desc;"
+            />
+          
+            <setting type="defsearchpath" 
+              pref="DefaultSearchPath" 
+              title="&stationery.Options.tabOptions.DefaultSearchPath;" 
+              desc="&stationery.Options.tabOptions.DefaultSearchPath.desc;"
+            />
+
+            <setting type="menulist" 
+              pref="DefaultTemplateEncoding" 
+              title="&stationery.Options.tabOptions.TemplateCharset.label;" 
+            >
+              <menulist>
+                <menupopup>
+                  <menuitem label="&stationery.Options.tabOptions.TemplateCharset.utf8;" value="UTF-8"/>
+                  <menuseparator/>
+                  <menuitem label="&stationery.Options.tabOptions.TemplateCharset.iso1;" value="ISO 8859-1"/>
+                  <menuitem label="&stationery.Options.tabOptions.TemplateCharset.iso1;" value="ISO 8859-2"/>
+                  <menuitem label="&stationery.Options.tabOptions.TemplateCharset.iso4;" value="ISO 8859-4"/>
+                  <menuitem label="&stationery.Options.tabOptions.TemplateCharset.iso5;" value="ISO 8859-5"/>
+                  <menuitem label="&stationery.Options.tabOptions.TemplateCharset.iso6;" value="ISO 8859-6"/>
+                  <menuitem label="&stationery.Options.tabOptions.TemplateCharset.iso7;" value="ISO 8859-7"/>
+                  <menuitem label="&stationery.Options.tabOptions.TemplateCharset.iso8;" value="ISO 8859-8-i"/>
+                  <menuitem label="&stationery.Options.tabOptions.TemplateCharset.iso9;" value="ISO 8859-9"/>
+                  <menuseparator/>
+                  <menuitem label="&stationery.Options.tabOptions.TemplateCharset.win1250;" value="Windows-1250"/>
+                  <menuitem label="&stationery.Options.tabOptions.TemplateCharset.win1251;" value="Windows-1251"/>
+                  <menuitem label="&stationery.Options.tabOptions.TemplateCharset.win1252;" value="Windows-1252"/>
+                  <menuitem label="&stationery.Options.tabOptions.TemplateCharset.win1253;" value="Windows-1253"/>
+                  <menuitem label="&stationery.Options.tabOptions.TemplateCharset.win1254;" value="Windows-1254"/>
+                  <menuitem label="&stationery.Options.tabOptions.TemplateCharset.win1255;" value="Windows-1255"/>
+                  <menuitem label="&stationery.Options.tabOptions.TemplateCharset.win1256;" value="Windows-1256"/>
+                  <menuitem label="&stationery.Options.tabOptions.TemplateCharset.win1257;" value="Windows-1257"/>
+                  <menuitem label="&stationery.Options.tabOptions.TemplateCharset.win1258;" value="Windows-1258"/>
+
+                </menupopup>
+              </menulist>
+            </setting>
+            
+            <setting type="bool" 
+              pref="ChangeConfirmation" inverted="true"
+              title="&stationery.Options.tabOptions.ConfirmTemplateChange;"
+              desc="&stationery.Options.tabOptions.ConfirmTemplateChange.desc;"
+            />
+         
+            <setting type="group" 
+              title="&stationery.Options.tabOptions.ChangeTemplateWithIdentity;"
+              desc="&stationery.Options.tabOptions.ChangeTemplateWithIdentity.desc;"
+            >
+              <grid>
+                <columns>
+                  <column flex="1"/>
+                </columns>
+                
+                <rows>
+                  <row align="center">
+                    <innersetting type="bool" pref="ChangeTemplateWithIdentity" title="&stationery.Options.tabOptions.ChangeTemplateWithIdentity.yes;" />
+                  </row>
+                  <row align="center">
+                    <innersetting type="bool" pref="ChangeTemplateWithIdentityConfirmation" title="&stationery.Options.tabOptions.ChangeTemplateWithIdentity.confirmation;" />
+                  </row>
+                </rows>
+              </grid>
+            </setting>
+         
+            <setting type="group" 
+              title="&stationery.Options.tabOptions.Apply.label1;" 
+            >
+              <grid>
+                <columns>
+                  <column flex="1"/>
+                  <column flex="1"/>
+                </columns>
+
+                <rows>
+                  <row align="center">
+                    <innersetting type="bool" pref="ApplyStationery_New" title="&stationery.Options.tabOptions.Apply.NewmailCheckBox;" />
+                    <innersetting type="bool" pref="ApplyStationery_MailToUrl" title="&stationery.Options.tabOptions.Apply.MailtoCheckBox;" />
+                  </row>
+                  <row align="center">
+                    <innersetting type="bool" pref="ApplyStationery_ReplyToSender" title="&stationery.Options.tabOptions.Apply.ReplySenderCheckBox;" />
+                    <innersetting type="bool" pref="ApplyStationery_ReplyAll" title="&stationery.Options.tabOptions.Apply.ReplyAllCheckBox;" />
+                  </row>
+                  <row align="center">
+                    <innersetting type="bool" pref="ApplyStationery_ForwardAsAttachment" title="&stationery.Options.tabOptions.Apply.ForwardAttCheckBox;" />
+                    <innersetting type="bool" pref="ApplyStationery_ForwardInline" title="&stationery.Options.tabOptions.Apply.ForwardInlCheckBox;" />
+                  </row>
+                  <row align="center">
+                    <innersetting type="bool" pref="ApplyStationery_NewsPost" title="&stationery.Options.tabOptions.Apply.NewsCheckBox;" />
+                    <innersetting width="10"/>
+                  </row>
+                  <row align="center">
+                    <innersetting type="bool" pref="ApplyStationery_ReplyToGroup" title="&stationery.Options.tabOptions.Apply.ReplyGroupCheckBox;" />
+                    <innersetting type="bool" pref="ApplyStationery_ReplyToSenderAndGroup" title="&stationery.Options.tabOptions.Apply.ReplySenderGroupCheckBox;" />
+                  </row>
+                </rows>
+              </grid>
+            </setting>
+         
+         
+            <label class="preferences-group-title" value="&stationery.Options.tabOptions.Gui;"/>
+         
+            <setting type="group" title="&stationery.Options.tabOptions.Gui.label1;">
+              <grid>
+                <columns>
+                  <column/>
+                  <column/>
+                </columns>
+                <rows>
+                  <row align="center">
+                    <innersetting type="bool" pref="AttachMenu_3paneWrite" title="&stationery.Options.tabOptions.Gui.ToolbarWriteCheckBox;" />
+                    <innersetting type="bool" pref="AttachMenu_3paneReply" title="&stationery.Options.tabOptions.Gui.ToolbarReplyCheckBox;" />
+                  </row>
+                  <row align="center">
+                    <innersetting type="bool" pref="AttachMenu_3paneReplyAll" title="&stationery.Options.tabOptions.Gui.ToolbarReplyAllCheckBox;" />
+                    <innersetting type="bool" pref="AttachMenu_3paneForward" title="&stationery.Options.tabOptions.Gui.ToolbarForwardCheckBox;" />
+                  </row>
+                  <row align="center">
+                    <innersetting type="bool" pref="AttachMenu_3panehdrReply" title="&stationery.Options.tabOptions.Gui.HeaderReplyCheckBox;" />
+                    <innersetting type="bool" pref="AttachMenu_3panehdrForward" title="&stationery.Options.tabOptions.Gui.HeaderForwardCheckBox;" />
+                  </row>
+                </rows>
+              </grid>
+            
+            </setting>
+                  
+            <setting type="group" title="&stationery.Options.tabOptions.Gui.label2;">
+              <grid>
+                <columns>
+                  <column/>
+                  <column/>
+                </columns>
+                <rows>
+                  <row align="center">
+                    <innersetting type="bool" pref="AttachMenu_MsgViewWrite" title="&stationery.Options.tabOptions.Gui.ToolbarWriteCheckBox;" />
+                    <innersetting type="bool" pref="AttachMenu_MsgViewReply" title="&stationery.Options.tabOptions.Gui.ToolbarReplyCheckBox;" />
+                  </row>
+                  <row align="center">
+                    <innersetting type="bool" pref="AttachMenu_MsgViewReplyAll" title="&stationery.Options.tabOptions.Gui.ToolbarReplyAllCheckBox;" />
+                    <innersetting type="bool" pref="AttachMenu_MsgViewForward" title="&stationery.Options.tabOptions.Gui.ToolbarForwardCheckBox;" />
+                  </row>
+                  <row align="center">
+                    <innersetting type="bool" pref="AttachMenu_MsgViewhdrReply" title="&stationery.Options.tabOptions.Gui.HeaderReplyCheckBox;" />
+                    <innersetting type="bool" pref="AttachMenu_MsgViewhdrForward" title="&stationery.Options.tabOptions.Gui.HeaderForwardCheckBox;" />
+                  </row>
+                </rows>
+              </grid>
+            </setting>
+            
+            <setting type="bool" pref="AttachMenu_StationeryOptions" title="&stationery.Options.tabOptions.Gui.OptionsWindowCheckBox;" />
+            
+            
+            <label class="preferences-group-title" value="&stationery.Options.tabOptions.Gui.Composer;"/>
+
+            <setting type="bool" pref="AttachMenu_ComposerChangeStationery" title="&stationery.Options.tabOptions.Gui.ChangeStationeryCheckBox;" />
+
+            <setting type="bool" pref="AttachMenu_ComposerStationeryToolbutton" title="&stationery.Options.tabOptions.Gui.ChangeStationeryToolbutton;" />
+            
+            <setting type="menulist" 
+              pref="AddresingWidgetLines" 
+              title="&stationery.Options.tabOptions.Gui.AddresingWidgetLines;" 
+            >
+              <menulist style="max-width: 8em;">
+                <menupopup>
+                  <menuitem label="&stationery.Options.tabOptions.Gui.AddresingWidgetLines.default;" value="0"/>
+                  <menuitem label=" 1" value="1"/>
+                  <menuitem label=" 1.5" value="15"/>
+                  <menuitem label=" 2" value="2"/>
+                  <menuitem label=" 2.5" value="25"/>
+                  <menuitem label=" 3" value="3"/>
+                  <menuitem label=" 3.5" value="35"/>
+                  <menuitem label=" 4" value="4"/>
+                  <menuitem label=" 5" value="5"/>
+                  <menuitem label=" 6" value="6"/>
+                  <menuitem label=" 7" value="7"/>
+                </menupopup>
+              </menulist>
+            </setting>
+
+         
+         </rows>
+        </grid>      
+        
+      </vbox>
+      
+      <!-- source syntax higlight-->
+      <vbox id="source-page" flex="1" collapsed="true" style="overflow:auto">
+      
+        <grid class="settings-grid">
+          <columns>
+            <column flex="1" />
+            <column flex="2" />
+          </columns>
+          <rows>
+            <setting type="bool" pref="SourceEditEnabled" title="&stationery.Options.tabSource.UseSourceEdit;" 
+                     desc="&stationery.Options.tabSource.UseSourceEdit.desc;"/>
+            <setting type="font" pref="SourceEditOptions" pref-part="base"
+              title="&stationery.Options.tabSource.SourceEdit.Font;"/>
+            <setting type="bool" pref="SourceEditOptions" pref-part="wordWrap"
+              title="&stationery.Options.tabSource.SourceEdit.WrapLines;"/>
+
+            <setting type="menulist" 
+              pref="SourceEditOptions" pref-part="theme"
+              title="&stationery.Options.tabSource.SourceEdit.Theme;" 
+            >
+              <menulist>
+                <menupopup>
+                  <menuitem label="Chrome" value="chrome"/>
+                  <menuitem label="Clouds" value="clouds"/>
+                  <menuitem label="Crimson Editor" value="crimson_editor"/>
+                  <menuitem label="Dawn" value="dawn"/>
+                  <menuitem label="Dreamweaver" value="dreamweaver"/>
+                  <menuitem label="Eclipse" value="eclipse"/>
+                  <menuitem label="GitHub" value="github"/>
+                  <menuitem label="IPlastic" value="iplastic"/>
+                  <menuitem label="Solarized Light" value="solarized_light"/>
+                  <menuitem label="TextMate" value="textmate"/>
+                  <menuitem label="Tomorrow" value="tomorrow"/>
+                  <menuitem label="XCode" value="xcode"/>
+                  <menuitem label="Kuroir" value="kuroir"/>
+                  <menuitem label="KatzenMilch" value="katzenmilch"/>
+                  <menuitem label="SQL Server" value="sqlserver"/>
+                  <menuitem label="Ambiance" value="ambiance"/>
+                  <menuitem label="Chaos" value="chaos"/>
+                  <menuitem label="Clouds Midnight" value="clouds_midnight"/>
+                  <menuitem label="Cobalt" value="cobalt"/>
+                  <menuitem label="Gruvbox" value="gruvbox"/>
+                  <menuitem label="idle Fingers" value="idle_fingers"/>
+                  <menuitem label="krTheme" value="kr_theme"/>
+                  <menuitem label="Merbivore" value="merbivore"/>
+                  <menuitem label="Merbivore Soft" value="merbivore_soft"/>
+                  <menuitem label="Mono Industrial" value="mono_industrial"/>
+                  <menuitem label="Monokai" value="monokai"/>
+                  <menuitem label="Pastel on dark" value="pastel_on_dark"/>
+                  <menuitem label="Solarized Dark" value="solarized_dark"/>
+                  <menuitem label="Terminal" value="terminal"/>
+                  <menuitem label="Tomorrow Night" value="tomorrow_night"/>
+                  <menuitem label="Tomorrow Night Blue" value="tomorrow_night_blue"/>
+                  <menuitem label="Tomorrow Night Bright" value="tomorrow_night_bright"/>
+                  <menuitem label="Tomorrow Night 80s" value="tomorrow_night_eighties"/>
+                  <menuitem label="Twilight" value="twilight"/>
+                  <menuitem label="Vibrant Ink" value="vibrant_ink"/>
+                </menupopup>
+              </menulist>
+            </setting>
+              
+          </rows>
+        </grid>         
+        
+        <vbox flex="1" style="padding: 15px;" minheight="250" maxheight="400">
+          <label value="&stationery.Options.tabSource.Preview;"/>
+          <hbox flex="1" class="syntax-preview-box">
+            <iframe id="stationery-content-source-ace-preview" flex="1" src="chrome://stationery/content/html-source-editor.html" />
+            <splitter/>
+            <description flex="1">&#8678; &stationery.Options.tabSource.Preview.Hint;</description>
+          </hbox>
+        </vbox>
+      </vbox>
+      
+    </vbox>
+    
+  </hbox>  
+</page>

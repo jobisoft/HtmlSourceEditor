@@ -1,0 +1,58 @@
+/******************************************************************************
+project: "Stationery" extension for Thunderbird
+filename: options-tab.css
+author: Łukasz 'Arivald' Płomiński <arivald@interia.pl>
+description:  CSS for options tab, OSX
+******************************************************************************/
+
+
+
+/* category selector */
+
+/*
+.category {
+  -moz-appearance: none;
+  color: #252F3B;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  padding: 10px 4px;
+  -moz-box-align: center;
+  overflow: hidden;
+  min-height: 0;
+}
+
+.category[selected] {
+  background-color: rgba(255, 255, 255, 0.35);
+  color: -moz-dialogtext;
+  border-color: rgba(50, 65, 92, 0.4);
+  -moz-border-end-color: #C9CFD7;
+}*/
+
+/* templates list */
+
+.stationery-identity-box {
+  border-bottom: 1px solid #B6B1B9;
+}
+
+#stationery-templates-list {
+  border-top: 1px solid #B6B1B9;
+}
+
+.stationery-template-item {
+  border-bottom: 1px solid #B6B1B9;
+  color: #373D48;
+}
+
+.stationery-template-item[selected] {
+  background-color: rgba(105, 125, 149, 0.39);
+  color: black;
+}
+
+
+/* options page */ 
+
+setting{
+  border-top: 2px solid;
+  -moz-border-top-colors: rgba(28, 31, 37, 0.2) rgba(255, 255, 255, 0.2);
+}

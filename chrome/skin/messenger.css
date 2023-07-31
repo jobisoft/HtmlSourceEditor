@@ -1,0 +1,13 @@
+/******************************************************************************
+project: "Stationery" extension for Thunderbird
+filename: messenger.css
+author: Łukasz 'Arivald' Płomiński <arivald@interia.pl>
+description:  CSS for messenger window, all platforms
+******************************************************************************/
+
+
+/* messenger menu for accessing options window */
+#stationery-options {
+  list-style-image: url("chrome://stationery/skin/menu_icon.png");
+}
+

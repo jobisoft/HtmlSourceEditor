@@ -1,0 +1,99 @@
+<!ENTITY stationery.Composer.Tab.Edit "Uredi">
+<!ENTITY stationery.Composer.Tab.Source "Vir (HTML)">
+<!ENTITY stationery.Composer.Toolbutton.Change "Stationery">
+<!ENTITY stationery.Composer.Toolbutton.Change.Tip "Spremeni predlogo Stationary">
+<!ENTITY stationery.Composer.findCmd.label "Najdi ...">
+<!ENTITY stationery.Composer.findCmd.accesskey "N">
+<!ENTITY stationery.Options "Možnosti Stationary">
+<!ENTITY stationery.OptionsAKey "r">
+<!ENTITY stationery.Options.inline.moreOptions "Več možnosti">
+<!ENTITY stationery.Options.tabTemplates "Predloge">
+<!ENTITY stationery.Options.tabTemplates.Header.Identity.Label "Identiteta">
+<!ENTITY stationery.Options.tabTemplates.Header.Identity.Add "Dodaj">
+<!ENTITY stationery.Options.tabTemplates.Header.Identity.Add.Hint "Dodaj seznam za novo identiteto">
+<!ENTITY stationery.Options.tabTemplates.Header.Identity.Remove "Odstrani">
+<!ENTITY stationery.Options.tabTemplates.Header.Identity.Remove.Hint "Odstrani seznam za izbrano identiteto">
+<!ENTITY stationery.Options.tabTemplates.Header.Template.Add "Dodaj">
+<!ENTITY stationery.Options.tabTemplates.Header.Template.Add.Hint "Dodaj novo predlogo">
+<!ENTITY stationery.Options.tabTemplates.Header.Template.Remove "Odstrani">
+<!ENTITY stationery.Options.tabTemplates.Header.Template.Remove.Hint "Odstrani izbrano predlogo">
+<!ENTITY stationery.Options.tabTemplates.Header.Template.MoveUp "Premakni gor">
+<!ENTITY stationery.Options.tabTemplates.Header.Template.MoveUp.Hint "Premakni izbrano predlogo gor">
+<!ENTITY stationery.Options.tabTemplates.Header.Template.MoveDown "Premakni dol">
+<!ENTITY stationery.Options.tabTemplates.Header.Template.MoveDown.Hint "Premakni izbrano predlogo dol">
+<!ENTITY stationery.Options.tabTemplates.Header.Template.Edit "Uredi">
+<!ENTITY stationery.Options.tabTemplates.Header.Template.Edit.Hint "Kliknite za urejanje lastnosti trenutno izbrane predloge">
+<!ENTITY stationery.Options.tabTemplates.Header.Template.Edit.Finish "Končaj">
+<!ENTITY stationery.Options.tabTemplates.Header.Template.Edit.Finish.Hint "Kliknite, da končate urejanje predloge">
+<!ENTITY stationery.Options.tabTemplates.Header.Template.DragnDrop.Hint "Namig: Za spremembo vrstnega reda predlog lahko uporabite zmožnost povleci in spusti.">
+<!ENTITY stationery.Options.tabTemplates.Template.For.New "To predlogo lahko uporabljate v novi pošti">
+<!ENTITY stationery.Options.tabTemplates.Template.For.Reply "To predlogo lahko uporabljate v odgovorih">
+<!ENTITY stationery.Options.tabTemplates.Template.For.Forward "To predlogo lahko uporabljate za posredovanje">
+<!ENTITY stationery.Options.tabOptions "Možnosti">
+<!ENTITY stationery.Options.tabOptions.MaxTemplatesCount "Največje število predlog v meniju">
+<!ENTITY stationery.Options.tabOptions.AutoManage "Samodejno upravljaj s predlogami">
+<!ENTITY stationery.Options.tabOptions.AutoManage.desc "Ko je samodejno upravljanje omogočeno, bodo nove predloge samodejno dodane k meniju. Meni bo samodejno razvrščen in nazadnje uporabljena predloga bo postala privzeta. Brez samodejnega upravljanja morate upravljati s predlogami ročno v možnostih Stationary.">
+<!ENTITY stationery.Options.tabOptions.AutoManage.desc.short "Nove predloge bodo samodejno dodane k menijem">
+<!ENTITY stationery.Options.tabOptions.DefaultSearchPath "Privzeta mapa predlog">
+<!ENTITY stationery.Options.tabOptions.DefaultSearchPath.desc "Privzeta mapa, kjer bo Stationary iskal predloge. Lahko uporabite mapo v domači mapi ali pa mapo v vaši mapi profila.">
+<!ENTITY stationery.Options.tabOptions.DefaultSearchPath.Profile "Mapa v mapi profila: (priporočeno za uporabnike prenosnega TB-ja)">
+<!ENTITY stationery.Options.tabOptions.DefaultSearchPath.Any "Katerakoli mapa (npr. vaša mapa dokumentov)">
+<!ENTITY stationery.Options.tabOptions.DefaultSearchPath.Browse "Brskaj ...">
+<!ENTITY stationery.Options.tabOptions.TemplateCharset.label "Privzet niz znakov predloge">
+<!ENTITY stationery.Options.tabOptions.TemplateCharset.utf8 "Unicode - UTF-8">
+<!ENTITY stationery.Options.tabOptions.TemplateCharset.iso1 "Latinski 1 - ISO 8859-1">
+<!ENTITY stationery.Options.tabOptions.TemplateCharset.iso2 "Srednjeevropski - ISO 8859-2">
+<!ENTITY stationery.Options.tabOptions.TemplateCharset.iso4 "Baltski - ISO 8859-4">
+<!ENTITY stationery.Options.tabOptions.TemplateCharset.iso5 "Cirilski - ISO 8859-5">
+<!ENTITY stationery.Options.tabOptions.TemplateCharset.iso6 "Arabski - ISO 8859-6">
+<!ENTITY stationery.Options.tabOptions.TemplateCharset.iso7 "Grški - ISO 8859-7">
+<!ENTITY stationery.Options.tabOptions.TemplateCharset.iso8 "Hebrejski - ISO 8859-8-i">
+<!ENTITY stationery.Options.tabOptions.TemplateCharset.iso9 "Turški - ISO 8859-9">
+<!ENTITY stationery.Options.tabOptions.TemplateCharset.win1250 "Srednjeevropski - Windows-1250">
+<!ENTITY stationery.Options.tabOptions.TemplateCharset.win1251 "Cirilski - Windows-1251">
+<!ENTITY stationery.Options.tabOptions.TemplateCharset.win1252 "Zahodnoevropski - Windows-1252">
+<!ENTITY stationery.Options.tabOptions.TemplateCharset.win1253 "Grški - Windows-1253">
+<!ENTITY stationery.Options.tabOptions.TemplateCharset.win1254 "Turški - Windows-1254">
+<!ENTITY stationery.Options.tabOptions.TemplateCharset.win1255 "Hebrejski - Windows-1255">
+<!ENTITY stationery.Options.tabOptions.TemplateCharset.win1256 "Arabski - Windows-1256">
+<!ENTITY stationery.Options.tabOptions.TemplateCharset.win1257 "Baltski - Windows-1257">
+<!ENTITY stationery.Options.tabOptions.TemplateCharset.win1258 "Vietnamski - Windows-1258">
+<!ENTITY stationery.Options.tabOptions.ConfirmTemplateChange "Potrdi spremembo predloge">
+<!ENTITY stationery.Options.tabOptions.ConfirmTemplateChange.desc "Stationary bo vprašal za dodatno potrditev, kadar boste poskusili spremeniti predlogo v oknu za sestavljanje sporočila.">
+<!ENTITY stationery.Options.tabOptions.ChangeTemplateWithIdentity "Ob spremembi identitete spremeni predlogo">
+<!ENTITY stationery.Options.tabOptions.ChangeTemplateWithIdentity.desc "Kadar uporabnik spremeni svojo identiteto, samodejno spremeni predlogo na privzeto predlogo nove identitete.">
+<!ENTITY stationery.Options.tabOptions.ChangeTemplateWithIdentity.yes "Da, spremeni predlogo">
+<!ENTITY stationery.Options.tabOptions.ChangeTemplateWithIdentity.confirmation "Vprašaj za potrditev spremembe predloge, če je bilo sporočilo spremenjeno.">
+<!ENTITY stationery.Options.tabOptions.Gui "Prilagoditve uporabniškega vmesnika">
+<!ENTITY stationery.Options.tabOptions.Gui.label1 "V glavnem oknu Thunderbirda pripni na:">
+<!ENTITY stationery.Options.tabOptions.Gui.label2 "V oknu 'Pogled sporočila' pripni na:">
+<!ENTITY stationery.Options.tabOptions.Gui.ToolbarWriteCheckBox "Gumb orodne vrstice 'Sestavi'">
+<!ENTITY stationery.Options.tabOptions.Gui.ToolbarReplyCheckBox "Gumb orodne vrstice 'Odgovori'">
+<!ENTITY stationery.Options.tabOptions.Gui.ToolbarReplyAllCheckBox "Gumb orodne vrstice 'Odgovori vsem'">
+<!ENTITY stationery.Options.tabOptions.Gui.ToolbarForwardCheckBox "Gumb orodne vrstice 'Posreduj'">
+<!ENTITY stationery.Options.tabOptions.Gui.HeaderReplyCheckBox "Gumb glave 'Odgovori'">
+<!ENTITY stationery.Options.tabOptions.Gui.HeaderForwardCheckBox "Gumb glave 'Posreduj'">
+<!ENTITY stationery.Options.tabOptions.Gui.OptionsWindowCheckBox "Dodaj predmet menija 'Možnosti Stationary' k meniju 'Orodja'">
+<!ENTITY stationery.Options.tabOptions.Gui.ChangeStationeryCheckBox "Dodaj predmet menija 'Spremeni predlogo' k vsebinskemu meniju Sestavljalnika">
+<!ENTITY stationery.Options.tabOptions.Gui.ChangeStationeryToolbutton "Dodaj gumb za spremembo predloge glavni orodni vrstici Sestavljalnika">
+<!ENTITY stationery.Options.tabOptions.Apply.label1 "Samodejno uporabi predloge v:">
+<!ENTITY stationery.Options.tabOptions.Apply.NewmailCheckBox "Novi pošti">
+<!ENTITY stationery.Options.tabOptions.Apply.MailtoCheckBox "Pošti 'mailto:'">
+<!ENTITY stationery.Options.tabOptions.Apply.ReplySenderCheckBox "Odgovorih pošiljatelju">
+<!ENTITY stationery.Options.tabOptions.Apply.ReplyAllCheckBox "Odgovorih vsem pošiljateljem">
+<!ENTITY stationery.Options.tabOptions.Apply.ForwardAttCheckBox "Posredovanih sporočilih kot priponkah">
+<!ENTITY stationery.Options.tabOptions.Apply.ForwardInlCheckBox "Posredovanih sporočilih v besedilu">
+<!ENTITY stationery.Options.tabOptions.Apply.NewsCheckBox "Objavah novičarskih skupin">
+<!ENTITY stationery.Options.tabOptions.Apply.ReplyGroupCheckBox "Odgovorih na novičarske skupine">
+<!ENTITY stationery.Options.tabOptions.Apply.ReplySenderGroupCheckBox "Odgovorih na novičarske skupine in pošiljatelju">
+<!ENTITY stationery.Options.tabOptions.Gui.Composer "Prilagoditve sestavljalnika">
+<!ENTITY stationery.Options.tabOptions.Gui.AddresingWidgetLines "Število vrstic v gradniku naslavljanja">
+<!ENTITY stationery.Options.tabOptions.Gui.AddresingWidgetLines.default "privzeto">
+<!ENTITY stationery.Options.tabSourceEditor "Urejevalnik vira">
+<!ENTITY stationery.Options.tabSource.UseSourceEdit "Uporabi urejevalnik vira HTML">
+<!ENTITY stationery.Options.tabSource.UseSourceEdit.desc "To vam omogoča urejanje vira sporočil HTML">
+<!ENTITY stationery.Options.tabSource.Preview "Predogled:">
+<!ENTITY stationery.Options.tabSource.Preview.Hint "Namig: Spremite velikost urejevalnika, da vidite, kako deluje prelamljanje.">
+<!ENTITY stationery.Options.tabSource.SourceEdit.Font "Pisave">
+<!ENTITY stationery.Options.tabSource.SourceEdit.WrapLines "Prelomi vrstice">
+<!ENTITY stationery.Options.tabSource.SourceEdit.Theme "Tema">

@@ -1,0 +1,131 @@
+﻿<?xml version="1.0"?>
+<!-- *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+project: "Stationery" extension for Thunderbird
+filename: options-tab.xml
+author: Łukasz 'Arivald' Płomiński <arivald@interia.pl>
+description: binding file for options in tab page.
+  
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* -->
+<!DOCTYPE prefwindow SYSTEM "chrome://stationery/locale/stationery.dtd">
+
+<bindings id="stationeryOptionsTabBindings"
+          xmlns="http://www.mozilla.org/xbl"
+          xmlns:xbl="http://www.mozilla.org/xbl"
+          xmlns:html="http://www.w3.org/1999/xhtml"
+          xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+  <binding id="categories-list"
+           extends="chrome://global/content/bindings/richlistbox.xml#richlistbox">
+    <implementation>
+    
+    </implementation>
+  </binding>
+  
+  <binding id="category" extends="chrome://global/content/bindings/richlistbox.xml#richlistitem">
+    <content align="center" >
+      <xul:hbox align="center" xbl:inherits="tooltiptext=name" flex="1">
+        <xul:image anonid="icon" class="category-icon"/>
+        <xul:label anonid="name" class="category-name" flex="1" xbl:inherits="value=name" />
+      </xul:hbox>
+    </content>
+  </binding>
+        
+
+  <binding id="template-item" extends="chrome://global/content/bindings/richlistbox.xml#richlistitem">
+    <content >
+      <xul:vbox class="type-icon-container" align="center">
+        <xul:image class="type-icon"/>
+      </xul:vbox>
+      <xul:vbox flex="1">
+        <xul:box flex="1" align="start" style="display:block">
+          <xul:stack flex="0">
+            <xul:textbox anonid="title-edit" xbl:inherits="value=name,stationery-editmode" class="stationery-template-name-edit" oninput="titleChanged()" />
+            <xul:label anonid="title" xbl:inherits="value=name,stationery-editmode" class="stationery-template-name"/>
+          </xul:stack>
+        </xul:box>
+
+        <xul:label xbl:inherits="value=stationery-template-url, tooltiptext=stationery-template-url" flex="1" crop="center" class="stationery-template-url" />
+
+        <xul:hbox align="center" class="stationery-template-item-for-row">
+          <xul:image anonid="new-mail-img" xbl:inherits="stationery-editmode,stationery-for-new-mail" tooltiptext="&stationery.Options.tabTemplates.Template.For.New;" class="stationery-template-for-new-mail-img"/>
+          <xul:checkbox anonid="new-mail-cb" xbl:inherits="stationery-editmode,checked=stationery-for-new-mail" tooltiptext="&stationery.Options.tabTemplates.Template.For.New;" class="stationery-template-for-cb" oncommand="forNewMailChanged();"/>
+
+          <xul:image anonid="reply-img" xbl:inherits="stationery-editmode,stationery-for-reply" tooltiptext="&stationery.Options.tabTemplates.Template.For.Reply;" class="stationery-template-for-reply-img"/>
+          <xul:checkbox anonid="reply-cb" xbl:inherits="stationery-editmode,checked=stationery-for-reply" tooltiptext="#&stationery.Options.tabTemplates.Template.For.Reply;" class="stationery-template-for-cb" oncommand="forReplyChanged();"/>
+
+          <xul:image anonid="forward-img" xbl:inherits="stationery-editmode,stationery-for-forward" tooltiptext="&stationery.Options.tabTemplates.Template.For.Forward;" class="stationery-template-for-forward-img"/>
+          <xul:checkbox anonid="forward-cb" xbl:inherits="stationery-editmode,checked=stationery-for-forward" tooltiptext="&stationery.Options.tabTemplates.Template.For.Forward;" class="stationery-template-for-cb" oncommand="forForwardChanged();"/>
+          
+         </xul:hbox>
+
+      </xul:vbox>
+    </content>
+    
+    <implementation>
+      <constructor><![CDATA[
+        Components.utils.import('resource://stationery/content/stationery.jsm');
+        Components.utils.import('resource://stationery/content/prefs.jsm');
+      ]]></constructor>
+    
+      <field name="_title">document.getAnonymousElementByAttribute(this, "anonid", "title");</field>
+      <field name="_title_edit">document.getAnonymousElementByAttribute(this, "anonid", "title-edit");</field>
+
+      <field name="_for_new_mail">document.getAnonymousElementByAttribute(this, "anonid", "new-mail-img");</field>
+      <field name="_for_new_mail_cb">document.getAnonymousElementByAttribute(this, "anonid", "new-mail-cb");</field>
+      
+      <field name="_for_reply">document.getAnonymousElementByAttribute(this, "anonid", "reply-img");</field>
+      <field name="_for_reply_cb">document.getAnonymousElementByAttribute(this, "anonid", "reply-cb");</field>
+      
+      <field name="_for_forward">document.getAnonymousElementByAttribute(this, "anonid", "forward-img");</field>
+      <field name="_for_forward_cb">document.getAnonymousElementByAttribute(this, "anonid", "forward-cb");</field>
+      
+      <method name="titleChanged">
+        <body>
+        <![CDATA[
+          let uid = this.getAttribute('stationery-template');
+          let newValue = Stationery.templates.onTemplatePropertyEdited(uid, 'name', this._title_edit.value);
+          this._title_edit.value = newValue;
+          this._title.value = newValue;
+        ]]>
+        </body>
+      </method>
+        
+      <method name="forNewMailChanged">
+        <body>
+        <![CDATA[
+          let uid = this.getAttribute('stationery-template');
+          let newValue = Stationery.templates.onTemplatePropertyEdited(uid, 'flags.notForNewMail', !this._for_new_mail_cb.checked);
+          //this._for_new_mail_cb.checked = !newValue;
+          Stationery.setCheckboxLikeAttributeToElement(this, 'stationery-for-new-mail', !newValue);
+          //this.setAttribute('stationery-for-new-mail', this._for_new_mail_cb.checked);
+        ]]>
+        </body>
+      </method>
+        
+      <method name="forReplyChanged">
+        <body>
+        <![CDATA[
+          let uid = this.getAttribute('stationery-template');
+          let newValue = Stationery.templates.onTemplatePropertyEdited(uid, 'flags.notForReply', !this._for_reply_cb.checked);
+          //this._for_reply_cb.checked = !newValue;
+          Stationery.setCheckboxLikeAttributeToElement(this, 'stationery-for-reply', !newValue);
+        ]]>
+        </body>
+      </method>
+        
+      <method name="forForwardChanged">
+        <body>
+        <![CDATA[
+          let uid = this.getAttribute('stationery-template');
+          let newValue = Stationery.templates.onTemplatePropertyEdited(uid, 'flags.notForForward', !this._for_forward_cb.checked);
+          //this._for_forward_cb.checked = !newValue;
+          Stationery.setCheckboxLikeAttributeToElement(this, 'stationery-for-forward', !newValue);
+        ]]>
+        </body>
+      </method>
+    
+    </implementation>
+    
+  </binding>
+        
+</bindings>

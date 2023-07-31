@@ -1,0 +1,105 @@
+<!ENTITY stationery.Composer.Tab.Edit "Edit">
+<!ENTITY stationery.Composer.Tab.Source "Source (HTML)">
+<!ENTITY stationery.Composer.Toolbutton.Change "Stationery">
+<!ENTITY stationery.Composer.Toolbutton.Change.Tip "Change Stationery template">
+<!ENTITY stationery.Composer.findCmd.label "Find...">
+<!ENTITY stationery.Composer.findCmd.accesskey "F">
+<!ENTITY stationery.Options "Stationery options">
+<!ENTITY stationery.OptionsAKey "S">
+<!ENTITY stationery.Options.inline.moreOptions "More options">
+<!ENTITY stationery.Options.tabTemplates "Templates">
+<!ENTITY stationery.Options.tabTemplates.Header.Identity.Label "Identity">
+<!ENTITY stationery.Options.tabTemplates.Header.Identity.Add "Add">
+<!ENTITY stationery.Options.tabTemplates.Header.Identity.Add.Hint "Add list for new identity">
+<!ENTITY stationery.Options.tabTemplates.Header.Identity.Remove "Remove">
+<!ENTITY stationery.Options.tabTemplates.Header.Identity.Remove.Hint "Remove list for selected identity">
+<!ENTITY stationery.Options.tabTemplates.Header.Template.Add "Add">
+<!ENTITY stationery.Options.tabTemplates.Header.Template.Add.Hint "Add new template">
+<!ENTITY stationery.Options.tabTemplates.Header.Template.Remove "Remove">
+<!ENTITY stationery.Options.tabTemplates.Header.Template.Remove.Hint "Remove selected  template">
+<!ENTITY stationery.Options.tabTemplates.Header.Template.MoveUp "Move up">
+<!ENTITY stationery.Options.tabTemplates.Header.Template.MoveUp.Hint "Move selected template up">
+<!ENTITY stationery.Options.tabTemplates.Header.Template.MoveDown "Move down">
+<!ENTITY stationery.Options.tabTemplates.Header.Template.MoveDown.Hint "Move selected template down">
+<!ENTITY stationery.Options.tabTemplates.Header.Template.Edit "Edit">
+<!ENTITY stationery.Options.tabTemplates.Header.Template.Edit.Hint "Click to edit properties of currently selected template">
+<!ENTITY stationery.Options.tabTemplates.Header.Template.Edit.Finish "Finish">
+<!ENTITY stationery.Options.tabTemplates.Header.Template.Edit.Finish.Hint "Click to finish editing template">
+<!ENTITY stationery.Options.tabTemplates.Header.Template.DragnDrop.Hint "Hint: You can use drag'n'drop to change order of templates.">
+<!ENTITY stationery.Options.tabTemplates.Template.For.New "This template can be used in new mails">
+<!ENTITY stationery.Options.tabTemplates.Template.For.Reply "This template can be used in replies">
+<!ENTITY stationery.Options.tabTemplates.Template.For.Forward "This template can be used for forwarding">
+<!ENTITY stationery.Options.tabOptions "Options">
+<!ENTITY stationery.Options.tabOptions.MaxTemplatesCount "Maximum number of templates in menu">
+<!ENTITY stationery.Options.tabOptions.AutoManage "Manage templates automatically">
+<!ENTITY stationery.Options.tabOptions.AutoManage.desc "When automatic management is enabled, then new templates will be automatically added to menu. Menu will be automatically sorted, last used template will become default.
+
+
+Without automatic management you must manually manage templates in Stationery options.">
+<!ENTITY stationery.Options.tabOptions.AutoManage.desc.short "New templates will be automatically added to menus">
+<!ENTITY stationery.Options.tabOptions.DefaultSearchPath "Default templates folder">
+<!ENTITY stationery.Options.tabOptions.DefaultSearchPath.desc "Default folder where Stationery will look for templates.
+
+
+You can use folder in Your home directory, or folder in your profile directory.">
+<!ENTITY stationery.Options.tabOptions.DefaultSearchPath.Profile "Folder inside profile folder: (recommended for TB portable users)">
+<!ENTITY stationery.Options.tabOptions.DefaultSearchPath.Any "Any folder (for example your documents folder)">
+<!ENTITY stationery.Options.tabOptions.DefaultSearchPath.Browse "Browse...">
+<!ENTITY stationery.Options.tabOptions.TemplateCharset.label "Default template charset">
+<!ENTITY stationery.Options.tabOptions.TemplateCharset.utf8 "Unicode - UTF-8">
+<!ENTITY stationery.Options.tabOptions.TemplateCharset.iso1 "Latin 1 - ISO 8859-1">
+<!ENTITY stationery.Options.tabOptions.TemplateCharset.iso2 "Central European - ISO 8859-2">
+<!ENTITY stationery.Options.tabOptions.TemplateCharset.iso4 "Baltic - ISO 8859-4">
+<!ENTITY stationery.Options.tabOptions.TemplateCharset.iso5 "Cyrillic - ISO 8859-5">
+<!ENTITY stationery.Options.tabOptions.TemplateCharset.iso6 "Arabic - ISO 8859-6">
+<!ENTITY stationery.Options.tabOptions.TemplateCharset.iso7 "Greek - ISO 8859-7">
+<!ENTITY stationery.Options.tabOptions.TemplateCharset.iso8 "Hebrew - ISO 8859-8-i">
+<!ENTITY stationery.Options.tabOptions.TemplateCharset.iso9 "Turkish - ISO 8859-9">
+<!ENTITY stationery.Options.tabOptions.TemplateCharset.win1250 "Central European - Windows-1250">
+<!ENTITY stationery.Options.tabOptions.TemplateCharset.win1251 "Cyrillic - Windows-1251">
+<!ENTITY stationery.Options.tabOptions.TemplateCharset.win1252 "Western European - Windows-1252">
+<!ENTITY stationery.Options.tabOptions.TemplateCharset.win1253 "Greek - Windows-1253">
+<!ENTITY stationery.Options.tabOptions.TemplateCharset.win1254 "Turkish - Windows-1254">
+<!ENTITY stationery.Options.tabOptions.TemplateCharset.win1255 "Hebrew - Windows-1255">
+<!ENTITY stationery.Options.tabOptions.TemplateCharset.win1256 "Arabic - Windows-1256">
+<!ENTITY stationery.Options.tabOptions.TemplateCharset.win1257 "Baltic - Windows-1257">
+<!ENTITY stationery.Options.tabOptions.TemplateCharset.win1258 "Vietnamese - Windows-1258">
+<!ENTITY stationery.Options.tabOptions.ConfirmTemplateChange "Confirm template change">
+<!ENTITY stationery.Options.tabOptions.ConfirmTemplateChange.desc "Stationery will ask for additional confirmation when You try to change template in composition window.">
+<!ENTITY stationery.Options.tabOptions.ChangeTemplateWithIdentity "Change template when identity is changed">
+<!ENTITY stationery.Options.tabOptions.ChangeTemplateWithIdentity.desc "Automatically change template when user change his identity, to default template of new identity.">
+<!ENTITY stationery.Options.tabOptions.ChangeTemplateWithIdentity.yes "Yes, change template">
+<!ENTITY stationery.Options.tabOptions.ChangeTemplateWithIdentity.confirmation "If message was modified, ask for confirmation to change template">
+<!ENTITY stationery.Options.tabOptions.Gui "User interface customizations">
+<!ENTITY stationery.Options.tabOptions.Gui.label1 "In main Thunderbird window attach to:">
+<!ENTITY stationery.Options.tabOptions.Gui.label2 "In &apos;View message&apos; window attach to:">
+<!ENTITY stationery.Options.tabOptions.Gui.ToolbarWriteCheckBox "Toolbar &apos;Write&apos; button">
+<!ENTITY stationery.Options.tabOptions.Gui.ToolbarReplyCheckBox "Toolbar &apos;Reply&apos; button">
+<!ENTITY stationery.Options.tabOptions.Gui.ToolbarReplyAllCheckBox "Toolbar &apos;Reply All&apos; button">
+<!ENTITY stationery.Options.tabOptions.Gui.ToolbarForwardCheckBox "Toolbar &apos;Forward&apos; button">
+<!ENTITY stationery.Options.tabOptions.Gui.HeaderReplyCheckBox "Header &apos;Reply&apos; buttons">
+<!ENTITY stationery.Options.tabOptions.Gui.HeaderForwardCheckBox "Header &apos;Forward&apos; button">
+<!ENTITY stationery.Options.tabOptions.Gui.OptionsWindowCheckBox "Add &apos;Stationery options&apos; menu item to &apos;Tools&apos; menu">
+<!ENTITY stationery.Options.tabOptions.Gui.ChangeStationeryCheckBox "Add &apos;Change Stationery...&apos; menu item to Composer&apos;s context menu">
+<!ENTITY stationery.Options.tabOptions.Gui.ChangeStationeryToolbutton "Add toolbutton to change Stationery to Composer&apos;s main toolbar">
+<!ENTITY stationery.Options.tabOptions.Apply.label1 "Automatically use stationery in:">
+<!ENTITY stationery.Options.tabOptions.Apply.NewmailCheckBox "New mail">
+<!ENTITY stationery.Options.tabOptions.Apply.MailtoCheckBox "&apos;mailto:&apos; mail">
+<!ENTITY stationery.Options.tabOptions.Apply.ReplySenderCheckBox "Reply to sender">
+<!ENTITY stationery.Options.tabOptions.Apply.ReplyAllCheckBox "Reply to all">
+<!ENTITY stationery.Options.tabOptions.Apply.ForwardAttCheckBox "Forward as attachment">
+<!ENTITY stationery.Options.tabOptions.Apply.ForwardInlCheckBox "Forward in-line">
+<!ENTITY stationery.Options.tabOptions.Apply.NewsCheckBox "News group post">
+<!ENTITY stationery.Options.tabOptions.Apply.ReplyGroupCheckBox "News reply to group">
+<!ENTITY stationery.Options.tabOptions.Apply.ReplySenderGroupCheckBox "News reply to sender &amp; group">
+<!ENTITY stationery.Options.tabOptions.Gui.Composer "Composer customizations">
+<!ENTITY stationery.Options.tabOptions.Gui.AddresingWidgetLines "Number of rows in Addressing Widget">
+<!ENTITY stationery.Options.tabOptions.Gui.AddresingWidgetLines.default "default">
+<!ENTITY stationery.Options.tabSourceEditor "Source editor">
+<!ENTITY stationery.Options.tabSource.UseSourceEdit "Use HTML source editor">
+<!ENTITY stationery.Options.tabSource.UseSourceEdit.desc "This will allow you to edit message source HTML">
+<!ENTITY stationery.Options.tabSource.Preview "Preview:">
+<!ENTITY stationery.Options.tabSource.Preview.Hint "Hint: Resize editor to see how line wrapping woks.">
+<!ENTITY stationery.Options.tabSource.SourceEdit.Font "font">
+<!ENTITY stationery.Options.tabSource.SourceEdit.WrapLines "wrap lines">
+<!ENTITY stationery.Options.tabSource.SourceEdit.Theme "theme">

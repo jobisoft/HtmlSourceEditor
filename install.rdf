@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+  <Description about="urn:mozilla:install-manifest">
+    <em:id>{d0e38b3a-0d60-46bf-bf01-83d4ba041015}</em:id>
+    <em:type>2</em:type>
+    <em:version>1.0.0</em:version>
+
+    <em:name>Stationery</em:name>
+    <em:description>Extension to mimic Outlook Express Stationery.</em:description>
+    <em:iconURL>chrome://stationery/skin/main_icon.png</em:iconURL>
+
+    <em:creator>Łukasz Płomiński</em:creator>
+    
+    <em:translator>Sven Giermann (de)</em:translator>
+    <em:translator>Jean-Bernard Marcon (fr)</em:translator>
+    <em:translator>mar Babelzilla community member (jp)</em:translator>
+    <em:translator>Łukasz Płomiński (pl)</em:translator>
+    <em:translator>Luiz Bettoni (pt-BR)</em:translator>
+    <em:translator>Carlos Simão (pt-PT)</em:translator>
+    <em:translator>Mikael Hiort af Ornäs (sv-SE)</em:translator>
+    <em:translator>HeartBlade (zh-CN)</em:translator>
+    <em:translator>strel Babelzilla community member (es)</em:translator>
+
+    <em:targetApplication> <!-- Thunderbird -->
+      <Description>
+        <em:id>{3550f703-e582-4d05-9a08-453d09bdfdc6}</em:id>
+        <em:minVersion>52.0</em:minVersion>
+        <em:maxVersion>60.*</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+    
+    <em:localized>
+      <Description>
+        <em:locale>pl</em:locale>
+        <em:name>Stationery - Papeterie</em:name>
+        <em:description>Rozszerzenie umożliwia korzystanie z papeterii w poczcie.</em:description>
+      </Description>
+    </em:localized>    
+  
+    <em:localized>
+      <Description>
+        <em:locale>de</em:locale>
+        <em:name>Stationery</em:name>
+        <em:description>Erweiterung zur Verwendung von Mail-Vorlagen.</em:description>
+      </Description>
+    </em:localized>    
+  
+    <em:localized>
+      <Description>
+        <em:locale>fr</em:locale>
+        <em:name>Stationery</em:name>
+        <em:description>Extension qui émule le papier à lettres d'Outlook Express.</em:description>
+      </Description>
+    </em:localized>    
+  
+    <em:localized>
+      <Description>
+        <em:locale>ja</em:locale>
+        <em:name>Stationery</em:name>
+        <em:description>Outlook Express のひな形機能を模倣する拡張。</em:description>
+      </Description>
+    </em:localized>  
+    
+    <em:localized>
+      <Description>
+        <em:locale>zh-CN</em:locale>
+        <em:name>Stationery</em:name>
+        <em:description>模仿 Outlook Express 信纸。</em:description>
+      </Description>
+    </em:localized>      
+    
+    <em:localized>
+      <Description>
+        <em:locale>sl-SI</em:locale>
+        <em:name>Stationery</em:name>
+        <em:description>Dodatek, ki je podoben predlogam programa Outlook Express.</em:description>
+      </Description>
+    </em:localized>      
+    
+       
+  </Description>
+</RDF>

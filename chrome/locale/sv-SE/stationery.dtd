@@ -1,0 +1,99 @@
+<!ENTITY stationery.Composer.Tab.Edit "Redigera">
+<!ENTITY stationery.Composer.Tab.Source "Källkod (HTML)">
+<!ENTITY stationery.Composer.Toolbutton.Change "Mall">
+<!ENTITY stationery.Composer.Toolbutton.Change.Tip "Ändra mall">
+<!ENTITY stationery.Composer.findCmd.label "Sök...">
+<!ENTITY stationery.Composer.findCmd.accesskey "ö">
+<!ENTITY stationery.Options "Inställningar för Stationery">
+<!ENTITY stationery.OptionsAKey "I">
+<!ENTITY stationery.Options.inline.moreOptions "Fler alternativ">
+<!ENTITY stationery.Options.tabTemplates "Mallar">
+<!ENTITY stationery.Options.tabTemplates.Header.Identity.Label "Identitet">
+<!ENTITY stationery.Options.tabTemplates.Header.Identity.Add "Lägg till">
+<!ENTITY stationery.Options.tabTemplates.Header.Identity.Add.Hint "Lägg till lista för ny identitet">
+<!ENTITY stationery.Options.tabTemplates.Header.Identity.Remove "Ta bort">
+<!ENTITY stationery.Options.tabTemplates.Header.Identity.Remove.Hint "Ta bort lista för vald identitet">
+<!ENTITY stationery.Options.tabTemplates.Header.Template.Add "Lägg till">
+<!ENTITY stationery.Options.tabTemplates.Header.Template.Add.Hint "Lägg till ny mall">
+<!ENTITY stationery.Options.tabTemplates.Header.Template.Remove "Ta bort">
+<!ENTITY stationery.Options.tabTemplates.Header.Template.Remove.Hint "Ta bort vald mall">
+<!ENTITY stationery.Options.tabTemplates.Header.Template.MoveUp "Flytta upp">
+<!ENTITY stationery.Options.tabTemplates.Header.Template.MoveUp.Hint "Flytta upp vald mall">
+<!ENTITY stationery.Options.tabTemplates.Header.Template.MoveDown "Flytta ned">
+<!ENTITY stationery.Options.tabTemplates.Header.Template.MoveDown.Hint "Flytta ned vald mall">
+<!ENTITY stationery.Options.tabTemplates.Header.Template.Edit "Redigera">
+<!ENTITY stationery.Options.tabTemplates.Header.Template.Edit.Hint "Klicka för att redigera egenskaperna i vald mall">
+<!ENTITY stationery.Options.tabTemplates.Header.Template.Edit.Finish "Slutför">
+<!ENTITY stationery.Options.tabTemplates.Header.Template.Edit.Finish.Hint "Klicka för att slutföra redigering av mall">
+<!ENTITY stationery.Options.tabTemplates.Header.Template.DragnDrop.Hint "Tips: Du kan dra och släppa för att ändra mallarnas ordning.">
+<!ENTITY stationery.Options.tabTemplates.Template.For.New "Denna mall kan användas i nya e-postmeddelanden">
+<!ENTITY stationery.Options.tabTemplates.Template.For.Reply "Denna mall kan användas i svar">
+<!ENTITY stationery.Options.tabTemplates.Template.For.Forward "Denna mall kan användas i vidarebefordringar">
+<!ENTITY stationery.Options.tabOptions "Inställningar">
+<!ENTITY stationery.Options.tabOptions.MaxTemplatesCount "Maximalt antal mallar i menyn">
+<!ENTITY stationery.Options.tabOptions.AutoManage "Hantera mallar automatiskt">
+<!ENTITY stationery.Options.tabOptions.AutoManage.desc "När automatisk hantering aktiveras kommer nya mallar automatiskt att läggas till i menyn. Menyn kommer automatiskt sorteras så att den senaste använda mallen blir standard. Utan automatisk hantering måste du manuellt hantera mallar i inställningarna för Stationery.">
+<!ENTITY stationery.Options.tabOptions.AutoManage.desc.short "Nya mallar kommer automatiskt att läggas till i menyer">
+<!ENTITY stationery.Options.tabOptions.DefaultSearchPath "Standardmapp för mallar">
+<!ENTITY stationery.Options.tabOptions.DefaultSearchPath.desc "Standardmapp där Stationery letar efter mallar. Du kan använda mappen i din hemkatalog eller mappen i din profilkatalog.">
+<!ENTITY stationery.Options.tabOptions.DefaultSearchPath.Profile "Mapp inuti profilmapp: (rekommenderas för användare av TB portable)">
+<!ENTITY stationery.Options.tabOptions.DefaultSearchPath.Any "Valfri mall (t.ex. din dokumentmapp)">
+<!ENTITY stationery.Options.tabOptions.DefaultSearchPath.Browse "Bläddra...">
+<!ENTITY stationery.Options.tabOptions.TemplateCharset.label "Standardkodning för mallar">
+<!ENTITY stationery.Options.tabOptions.TemplateCharset.utf8 "Unicode - UTF-8">
+<!ENTITY stationery.Options.tabOptions.TemplateCharset.iso1 "Latin 1 - ISO 8859-1">
+<!ENTITY stationery.Options.tabOptions.TemplateCharset.iso2 "Centraleuropeiska - ISO 8859-2">
+<!ENTITY stationery.Options.tabOptions.TemplateCharset.iso4 "Baltiska - ISO 8859-4">
+<!ENTITY stationery.Options.tabOptions.TemplateCharset.iso5 "Kyrilliska - ISO 8859-5">
+<!ENTITY stationery.Options.tabOptions.TemplateCharset.iso6 "Arabiska - ISO 8859-6">
+<!ENTITY stationery.Options.tabOptions.TemplateCharset.iso7 "Grekiska - ISO 8859-7">
+<!ENTITY stationery.Options.tabOptions.TemplateCharset.iso8 "Hebreiska - ISO 8859-8-i">
+<!ENTITY stationery.Options.tabOptions.TemplateCharset.iso9 "Turkiska - ISO 8859-9">
+<!ENTITY stationery.Options.tabOptions.TemplateCharset.win1250 "Centraleuropeiska - Windows-1250">
+<!ENTITY stationery.Options.tabOptions.TemplateCharset.win1251 "Kyrilliska - Windows-1251">
+<!ENTITY stationery.Options.tabOptions.TemplateCharset.win1252 "Västeuropeiska - Windows-1252">
+<!ENTITY stationery.Options.tabOptions.TemplateCharset.win1253 "Grekiska - Windows-1253">
+<!ENTITY stationery.Options.tabOptions.TemplateCharset.win1254 "Turkiska - Windows-1254">
+<!ENTITY stationery.Options.tabOptions.TemplateCharset.win1255 "Hebreiska - Windows-1255">
+<!ENTITY stationery.Options.tabOptions.TemplateCharset.win1256 "Arabiska - Windows-1256">
+<!ENTITY stationery.Options.tabOptions.TemplateCharset.win1257 "Baltiska - Windows-1257">
+<!ENTITY stationery.Options.tabOptions.TemplateCharset.win1258 "Vietnamesiska - Windows-1258">
+<!ENTITY stationery.Options.tabOptions.ConfirmTemplateChange "Bekräfta mallbyte">
+<!ENTITY stationery.Options.tabOptions.ConfirmTemplateChange.desc "Stationery kommer att fråga efter ytterligare bekräftelse när du försöker byta mall i fönstret för nytt e-postmeddelande.">
+<!ENTITY stationery.Options.tabOptions.ChangeTemplateWithIdentity "Byt mall när identitet ändras">
+<!ENTITY stationery.Options.tabOptions.ChangeTemplateWithIdentity.desc "Byt mall automatiskt när användaren byter sin identitet till standardmallen för den nya identiteten.">
+<!ENTITY stationery.Options.tabOptions.ChangeTemplateWithIdentity.yes "Ja, byt mall">
+<!ENTITY stationery.Options.tabOptions.ChangeTemplateWithIdentity.confirmation "Om meddelandet ändrades, fråga efter bekräftelse för att byta mall">
+<!ENTITY stationery.Options.tabOptions.Gui "Anpassningar av användargränssnittet">
+<!ENTITY stationery.Options.tabOptions.Gui.label1 "I Thunderbirds huvudfönster, bifoga till:">
+<!ENTITY stationery.Options.tabOptions.Gui.label2 "I meddelandefönstret, bifoga till:">
+<!ENTITY stationery.Options.tabOptions.Gui.ToolbarWriteCheckBox "Verktygsfältsknappen &quot;Skriv&quot;">
+<!ENTITY stationery.Options.tabOptions.Gui.ToolbarReplyCheckBox "Verktygsfältsknappen &quot;Svara&quot;">
+<!ENTITY stationery.Options.tabOptions.Gui.ToolbarReplyAllCheckBox "Verktygsfältsknappen &quot;Svara alla&quot;">
+<!ENTITY stationery.Options.tabOptions.Gui.ToolbarForwardCheckBox "Verktygsfältsknappen &quot;Vidarebefordra&quot;">
+<!ENTITY stationery.Options.tabOptions.Gui.HeaderReplyCheckBox "Meddelandehuvudets &quot;Svara&quot;-knappar">
+<!ENTITY stationery.Options.tabOptions.Gui.HeaderForwardCheckBox "Meddelandehuvudets &quot;Vidarebefordra&quot;-knapp">
+<!ENTITY stationery.Options.tabOptions.Gui.OptionsWindowCheckBox "Infoga menyobjektet &quot;Inställningar för Stationery&quot; i Verktyg-menyn">
+<!ENTITY stationery.Options.tabOptions.Gui.ChangeStationeryCheckBox "Infoga menyobjektet &quot;Byt mall...&quot; i Skriv-fönstrets snabbmeny">
+<!ENTITY stationery.Options.tabOptions.Gui.ChangeStationeryToolbutton "Lägg till verktygsknapp för att byta Stationery till avsändarens huvudverktygsfält">
+<!ENTITY stationery.Options.tabOptions.Apply.label1 "Tillämpa automatiskt mall på:">
+<!ENTITY stationery.Options.tabOptions.Apply.NewmailCheckBox "Nytt meddelande">
+<!ENTITY stationery.Options.tabOptions.Apply.MailtoCheckBox "Meddelande via &quot;mailto:&quot;-länk">
+<!ENTITY stationery.Options.tabOptions.Apply.ReplySenderCheckBox "Svar till avsändaren">
+<!ENTITY stationery.Options.tabOptions.Apply.ReplyAllCheckBox "Svar till avsändaren &amp; alla mottagare">
+<!ENTITY stationery.Options.tabOptions.Apply.ForwardAttCheckBox "Vidarebefordran som bilaga">
+<!ENTITY stationery.Options.tabOptions.Apply.ForwardInlCheckBox "Vidarebefordran som infogat">
+<!ENTITY stationery.Options.tabOptions.Apply.NewsCheckBox "Diskussionsgruppsmeddelande">
+<!ENTITY stationery.Options.tabOptions.Apply.ReplyGroupCheckBox "Svar till diskussionsgrupp">
+<!ENTITY stationery.Options.tabOptions.Apply.ReplySenderGroupCheckBox "Svar till diskussionsgrupp, avsändare &amp; grupp">
+<!ENTITY stationery.Options.tabOptions.Gui.Composer "Anpassningar för nytt e-postmeddelande">
+<!ENTITY stationery.Options.tabOptions.Gui.AddresingWidgetLines "Antal rader i adresswidget">
+<!ENTITY stationery.Options.tabOptions.Gui.AddresingWidgetLines.default "standard">
+<!ENTITY stationery.Options.tabSourceEditor "Redigerare">
+<!ENTITY stationery.Options.tabSource.UseSourceEdit "Använd HTML-källredigerare">
+<!ENTITY stationery.Options.tabSource.UseSourceEdit.desc "Detta låter dig redigera meddelandets HTML-källkod">
+<!ENTITY stationery.Options.tabSource.Preview "Förhandsvisning:">
+<!ENTITY stationery.Options.tabSource.Preview.Hint "Tips: Storleksändra redigeraren för att se hur radbrytningen fungerar.">
+<!ENTITY stationery.Options.tabSource.SourceEdit.Font "typsnitt">
+<!ENTITY stationery.Options.tabSource.SourceEdit.WrapLines "radbrytning">
+<!ENTITY stationery.Options.tabSource.SourceEdit.Theme "tema">
