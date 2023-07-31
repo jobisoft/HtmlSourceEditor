@@ -1,0 +1,299 @@
+{
+    "stationery.Composer.Tab.Edit": {
+        "message": "Redigera"
+    },
+    "stationery.Composer.Tab.Source": {
+        "message": "Källkod (HTML)"
+    },
+    "stationery.Composer.Toolbutton.Change": {
+        "message": "Mall"
+    },
+    "stationery.Composer.Toolbutton.Change.Tip": {
+        "message": "Ändra mall"
+    },
+    "stationery.Composer.findCmd.accesskey": {
+        "message": "ö"
+    },
+    "stationery.Composer.findCmd.label": {
+        "message": "Sök..."
+    },
+    "stationery.Options": {
+        "message": "Inställningar för Stationery"
+    },
+    "stationery.Options.inline.moreOptions": {
+        "message": "Fler alternativ"
+    },
+    "stationery.Options.tabOptions": {
+        "message": "Inställningar"
+    },
+    "stationery.Options.tabOptions.Apply.ForwardAttCheckBox": {
+        "message": "Vidarebefordran som bilaga"
+    },
+    "stationery.Options.tabOptions.Apply.ForwardInlCheckBox": {
+        "message": "Vidarebefordran som infogat"
+    },
+    "stationery.Options.tabOptions.Apply.MailtoCheckBox": {
+        "message": "Meddelande via &quot;mailto:&quot;-länk"
+    },
+    "stationery.Options.tabOptions.Apply.NewmailCheckBox": {
+        "message": "Nytt meddelande"
+    },
+    "stationery.Options.tabOptions.Apply.NewsCheckBox": {
+        "message": "Diskussionsgruppsmeddelande"
+    },
+    "stationery.Options.tabOptions.Apply.ReplyAllCheckBox": {
+        "message": "Svar till avsändaren &amp; alla mottagare"
+    },
+    "stationery.Options.tabOptions.Apply.ReplyGroupCheckBox": {
+        "message": "Svar till diskussionsgrupp"
+    },
+    "stationery.Options.tabOptions.Apply.ReplySenderCheckBox": {
+        "message": "Svar till avsändaren"
+    },
+    "stationery.Options.tabOptions.Apply.ReplySenderGroupCheckBox": {
+        "message": "Svar till diskussionsgrupp, avsändare &amp; grupp"
+    },
+    "stationery.Options.tabOptions.Apply.label1": {
+        "message": "Tillämpa automatiskt mall på:"
+    },
+    "stationery.Options.tabOptions.AutoManage": {
+        "message": "Hantera mallar automatiskt"
+    },
+    "stationery.Options.tabOptions.AutoManage.desc": {
+        "message": "När automatisk hantering aktiveras kommer nya mallar automatiskt att läggas till i menyn. Menyn kommer automatiskt sorteras så att den senaste använda mallen blir standard. Utan automatisk hantering måste du manuellt hantera mallar i inställningarna för Stationery."
+    },
+    "stationery.Options.tabOptions.AutoManage.desc.short": {
+        "message": "Nya mallar kommer automatiskt att läggas till i menyer"
+    },
+    "stationery.Options.tabOptions.ChangeTemplateWithIdentity": {
+        "message": "Byt mall när identitet ändras"
+    },
+    "stationery.Options.tabOptions.ChangeTemplateWithIdentity.confirmation": {
+        "message": "Om meddelandet ändrades, fråga efter bekräftelse för att byta mall"
+    },
+    "stationery.Options.tabOptions.ChangeTemplateWithIdentity.desc": {
+        "message": "Byt mall automatiskt när användaren byter sin identitet till standardmallen för den nya identiteten."
+    },
+    "stationery.Options.tabOptions.ChangeTemplateWithIdentity.yes": {
+        "message": "Ja, byt mall"
+    },
+    "stationery.Options.tabOptions.ConfirmTemplateChange": {
+        "message": "Bekräfta mallbyte"
+    },
+    "stationery.Options.tabOptions.ConfirmTemplateChange.desc": {
+        "message": "Stationery kommer att fråga efter ytterligare bekräftelse när du försöker byta mall i fönstret för nytt e-postmeddelande."
+    },
+    "stationery.Options.tabOptions.DefaultSearchPath": {
+        "message": "Standardmapp för mallar"
+    },
+    "stationery.Options.tabOptions.DefaultSearchPath.Any": {
+        "message": "Valfri mall (t.ex. din dokumentmapp)"
+    },
+    "stationery.Options.tabOptions.DefaultSearchPath.Browse": {
+        "message": "Bläddra..."
+    },
+    "stationery.Options.tabOptions.DefaultSearchPath.Profile": {
+        "message": "Mapp inuti profilmapp: (rekommenderas för användare av TB portable)"
+    },
+    "stationery.Options.tabOptions.DefaultSearchPath.desc": {
+        "message": "Standardmapp där Stationery letar efter mallar. Du kan använda mappen i din hemkatalog eller mappen i din profilkatalog."
+    },
+    "stationery.Options.tabOptions.Gui": {
+        "message": "Anpassningar av användargränssnittet"
+    },
+    "stationery.Options.tabOptions.Gui.AddresingWidgetLines": {
+        "message": "Antal rader i adresswidget"
+    },
+    "stationery.Options.tabOptions.Gui.AddresingWidgetLines.default": {
+        "message": "standard"
+    },
+    "stationery.Options.tabOptions.Gui.ChangeStationeryCheckBox": {
+        "message": "Infoga menyobjektet &quot;Byt mall...&quot; i Skriv-fönstrets snabbmeny"
+    },
+    "stationery.Options.tabOptions.Gui.ChangeStationeryToolbutton": {
+        "message": "Lägg till verktygsknapp för att byta Stationery till avsändarens huvudverktygsfält"
+    },
+    "stationery.Options.tabOptions.Gui.Composer": {
+        "message": "Anpassningar för nytt e-postmeddelande"
+    },
+    "stationery.Options.tabOptions.Gui.HeaderForwardCheckBox": {
+        "message": "Meddelandehuvudets &quot;Vidarebefordra&quot;-knapp"
+    },
+    "stationery.Options.tabOptions.Gui.HeaderReplyCheckBox": {
+        "message": "Meddelandehuvudets &quot;Svara&quot;-knappar"
+    },
+    "stationery.Options.tabOptions.Gui.OptionsWindowCheckBox": {
+        "message": "Infoga menyobjektet &quot;Inställningar för Stationery&quot; i Verktyg-menyn"
+    },
+    "stationery.Options.tabOptions.Gui.ToolbarForwardCheckBox": {
+        "message": "Verktygsfältsknappen &quot;Vidarebefordra&quot;"
+    },
+    "stationery.Options.tabOptions.Gui.ToolbarReplyAllCheckBox": {
+        "message": "Verktygsfältsknappen &quot;Svara alla&quot;"
+    },
+    "stationery.Options.tabOptions.Gui.ToolbarReplyCheckBox": {
+        "message": "Verktygsfältsknappen &quot;Svara&quot;"
+    },
+    "stationery.Options.tabOptions.Gui.ToolbarWriteCheckBox": {
+        "message": "Verktygsfältsknappen &quot;Skriv&quot;"
+    },
+    "stationery.Options.tabOptions.Gui.label1": {
+        "message": "I Thunderbirds huvudfönster, bifoga till:"
+    },
+    "stationery.Options.tabOptions.Gui.label2": {
+        "message": "I meddelandefönstret, bifoga till:"
+    },
+    "stationery.Options.tabOptions.MaxTemplatesCount": {
+        "message": "Maximalt antal mallar i menyn"
+    },
+    "stationery.Options.tabOptions.TemplateCharset.iso1": {
+        "message": "Latin 1 - ISO 8859-1"
+    },
+    "stationery.Options.tabOptions.TemplateCharset.iso2": {
+        "message": "Centraleuropeiska - ISO 8859-2"
+    },
+    "stationery.Options.tabOptions.TemplateCharset.iso4": {
+        "message": "Baltiska - ISO 8859-4"
+    },
+    "stationery.Options.tabOptions.TemplateCharset.iso5": {
+        "message": "Kyrilliska - ISO 8859-5"
+    },
+    "stationery.Options.tabOptions.TemplateCharset.iso6": {
+        "message": "Arabiska - ISO 8859-6"
+    },
+    "stationery.Options.tabOptions.TemplateCharset.iso7": {
+        "message": "Grekiska - ISO 8859-7"
+    },
+    "stationery.Options.tabOptions.TemplateCharset.iso8": {
+        "message": "Hebreiska - ISO 8859-8-i"
+    },
+    "stationery.Options.tabOptions.TemplateCharset.iso9": {
+        "message": "Turkiska - ISO 8859-9"
+    },
+    "stationery.Options.tabOptions.TemplateCharset.label": {
+        "message": "Standardkodning för mallar"
+    },
+    "stationery.Options.tabOptions.TemplateCharset.utf8": {
+        "message": "Unicode - UTF-8"
+    },
+    "stationery.Options.tabOptions.TemplateCharset.win1250": {
+        "message": "Centraleuropeiska - Windows-1250"
+    },
+    "stationery.Options.tabOptions.TemplateCharset.win1251": {
+        "message": "Kyrilliska - Windows-1251"
+    },
+    "stationery.Options.tabOptions.TemplateCharset.win1252": {
+        "message": "Västeuropeiska - Windows-1252"
+    },
+    "stationery.Options.tabOptions.TemplateCharset.win1253": {
+        "message": "Grekiska - Windows-1253"
+    },
+    "stationery.Options.tabOptions.TemplateCharset.win1254": {
+        "message": "Turkiska - Windows-1254"
+    },
+    "stationery.Options.tabOptions.TemplateCharset.win1255": {
+        "message": "Hebreiska - Windows-1255"
+    },
+    "stationery.Options.tabOptions.TemplateCharset.win1256": {
+        "message": "Arabiska - Windows-1256"
+    },
+    "stationery.Options.tabOptions.TemplateCharset.win1257": {
+        "message": "Baltiska - Windows-1257"
+    },
+    "stationery.Options.tabOptions.TemplateCharset.win1258": {
+        "message": "Vietnamesiska - Windows-1258"
+    },
+    "stationery.Options.tabSource.Preview": {
+        "message": "Förhandsvisning:"
+    },
+    "stationery.Options.tabSource.Preview.Hint": {
+        "message": "Tips: Storleksändra redigeraren för att se hur radbrytningen fungerar."
+    },
+    "stationery.Options.tabSource.SourceEdit.Font": {
+        "message": "typsnitt"
+    },
+    "stationery.Options.tabSource.SourceEdit.Theme": {
+        "message": "tema"
+    },
+    "stationery.Options.tabSource.SourceEdit.WrapLines": {
+        "message": "radbrytning"
+    },
+    "stationery.Options.tabSource.UseSourceEdit": {
+        "message": "Använd HTML-källredigerare"
+    },
+    "stationery.Options.tabSource.UseSourceEdit.desc": {
+        "message": "Detta låter dig redigera meddelandets HTML-källkod"
+    },
+    "stationery.Options.tabSourceEditor": {
+        "message": "Redigerare"
+    },
+    "stationery.Options.tabTemplates": {
+        "message": "Mallar"
+    },
+    "stationery.Options.tabTemplates.Header.Identity.Add": {
+        "message": "Lägg till"
+    },
+    "stationery.Options.tabTemplates.Header.Identity.Add.Hint": {
+        "message": "Lägg till lista för ny identitet"
+    },
+    "stationery.Options.tabTemplates.Header.Identity.Label": {
+        "message": "Identitet"
+    },
+    "stationery.Options.tabTemplates.Header.Identity.Remove": {
+        "message": "Ta bort"
+    },
+    "stationery.Options.tabTemplates.Header.Identity.Remove.Hint": {
+        "message": "Ta bort lista för vald identitet"
+    },
+    "stationery.Options.tabTemplates.Header.Template.Add": {
+        "message": "Lägg till"
+    },
+    "stationery.Options.tabTemplates.Header.Template.Add.Hint": {
+        "message": "Lägg till ny mall"
+    },
+    "stationery.Options.tabTemplates.Header.Template.DragnDrop.Hint": {
+        "message": "Tips: Du kan dra och släppa för att ändra mallarnas ordning."
+    },
+    "stationery.Options.tabTemplates.Header.Template.Edit": {
+        "message": "Redigera"
+    },
+    "stationery.Options.tabTemplates.Header.Template.Edit.Finish": {
+        "message": "Slutför"
+    },
+    "stationery.Options.tabTemplates.Header.Template.Edit.Finish.Hint": {
+        "message": "Klicka för att slutföra redigering av mall"
+    },
+    "stationery.Options.tabTemplates.Header.Template.Edit.Hint": {
+        "message": "Klicka för att redigera egenskaperna i vald mall"
+    },
+    "stationery.Options.tabTemplates.Header.Template.MoveDown": {
+        "message": "Flytta ned"
+    },
+    "stationery.Options.tabTemplates.Header.Template.MoveDown.Hint": {
+        "message": "Flytta ned vald mall"
+    },
+    "stationery.Options.tabTemplates.Header.Template.MoveUp": {
+        "message": "Flytta upp"
+    },
+    "stationery.Options.tabTemplates.Header.Template.MoveUp.Hint": {
+        "message": "Flytta upp vald mall"
+    },
+    "stationery.Options.tabTemplates.Header.Template.Remove": {
+        "message": "Ta bort"
+    },
+    "stationery.Options.tabTemplates.Header.Template.Remove.Hint": {
+        "message": "Ta bort vald mall"
+    },
+    "stationery.Options.tabTemplates.Template.For.Forward": {
+        "message": "Denna mall kan användas i vidarebefordringar"
+    },
+    "stationery.Options.tabTemplates.Template.For.New": {
+        "message": "Denna mall kan användas i nya e-postmeddelanden"
+    },
+    "stationery.Options.tabTemplates.Template.For.Reply": {
+        "message": "Denna mall kan användas i svar"
+    },
+    "stationery.OptionsAKey": {
+        "message": "I"
+    }
+}
