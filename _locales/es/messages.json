@@ -1,8 +1,8 @@
 {
-    "stationery.Composer.Tab.Edit": {
-        "message": "Editar"
-    },
-    "stationery.Composer.Tab.Source": {
+    "extensionDescription": {
+        "message": "Permite editar el código fuente HTML del mensaje actualmente redactado"
+    },    
+    "sourceHTML": {
         "message": "Fuente (HTML)"
     }
 }

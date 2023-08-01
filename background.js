@@ -8,6 +8,8 @@ async function setButtonStatus(tabId) {
 }
 
 async function init() {
+    browser.composeAction.setTitle({title: browser.i18n.getMessage("sourceHTML")});
+    
     let composeTabs = await browser.tabs.query({type:"messageCompose"});
     for (let composeTab of composeTabs) {
         setButtonStatus(composeTab.id);

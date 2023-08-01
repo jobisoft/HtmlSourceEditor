@@ -1,8 +1,8 @@
 {
-    "stationery.Composer.Tab.Edit": {
-        "message": "編集"
-    },
-    "stationery.Composer.Tab.Source": {
+    "extensionDescription": {
+        "message": "現在作成されているメッセージの HTML ソース コードを編集できます。"
+    },    
+    "sourceHTML": {
         "message": "ソース(HTML)"
     }
 }
