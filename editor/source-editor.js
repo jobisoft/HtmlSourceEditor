@@ -28,7 +28,9 @@ var sourceEditor = {
       let details = await browser.compose.getComposeDetails(tabId);
       const editor = getEditor(win);
       editor.getSession().setMode("ace/mode/html");
-      editor.setValue(details.body, -1);
+
+      let beautifiedBody = html_beautify(details.body);
+      editor.setValue(beautifiedBody, -1);
 
       editor.setShowPrintMargin(false);
       editor.$blockScrolling = Infinity;
