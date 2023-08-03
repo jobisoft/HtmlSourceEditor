@@ -14,7 +14,7 @@
     "32": "images/icon-html.png"
   },
   "permissions": [
-    "compose"
+    "compose", "menus"
   ],
   "background": {
     "scripts": [
