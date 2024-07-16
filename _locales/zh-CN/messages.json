@@ -3,6 +3,6 @@
         "message": "允许编辑当前撰写消息的 HTML 源代码"
     },    
     "sourceHTML": {
-        "message": "来源 (HTML)"
+        "message": "源代码 (HTML)"
     }
 }
