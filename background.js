@@ -38,6 +38,13 @@ async function openHtmlEditor(tab) {
     });
 }
 
+async function closeHtmlEditor(tabId, tabRemoveInfo) {
+    if (openEditors.has(tabId)) {
+        browser.windows.remove(openEditors.get(tabId));
+        // onRemoved listener added in openHtmlEditor() will delete window from openEditors
+    }
+}
+
 async function init() {
     browser.composeAction.setTitle({ title: browser.i18n.getMessage("sourceHTML") });
 
@@ -69,5 +76,6 @@ async function init() {
 
     browser.composeAction.onClicked.addListener((tab, info) => openHtmlEditor(tab));
 
+    browser.tabs.onRemoved.addListener((tabId, tabRemoveInfo) => closeHtmlEditor(tabId, tabRemoveInfo));
 }
 init();
