@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "applications": {
+  "browser_specific_settings": {
     "gecko": {
       "id": "edithtmlsource@jobisoft.de",
       "strict_min_version": "102.0"
